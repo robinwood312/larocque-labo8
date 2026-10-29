@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="451.0" prefWidth="530.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.EtudiantController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="119.0" minWidth="10.0" prefWidth="40.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="552.0" minWidth="10.0" prefWidth="480.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="428.0" minWidth="0.0" prefWidth="31.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="243.0" minHeight="10.0" prefHeight="243.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="126.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="36.0" prefHeight="254.0" prefWidth="436.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets top="25.0" />
+         </GridPane.margin>
+         <padding>
+            <Insets top="8.0" />
+         </padding>
+      </VBox>
+      <Label alignment="CENTER" lineSpacing="10.0" prefHeight="59.0" prefWidth="529.0" text="Exemple d'utilisation d'une table avec Java FXML" textAlignment="CENTER" GridPane.columnIndex="1">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+         <padding>
+            <Insets top="8.0" />
+         </padding>
+      </Label>
+      <TableView fx:id="tableView" prefHeight="274.0" prefWidth="473.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <columns>
+          <TableColumn maxWidth="120.0" minWidth="120.0" prefWidth="120.0" text="Numéro de DA">
+            <cellValueFactory><PropertyValueFactory property="numDA" /></cellValueFactory>
+         </TableColumn>
+         <TableColumn maxWidth="120.0" minWidth="120.0" prefWidth="120.0" text="Nom">
+            <cellValueFactory><PropertyValueFactory property="nom" /></cellValueFactory>
+         </TableColumn>
+         <TableColumn maxWidth="120.0" minWidth="120.0" prefWidth="120.0" text="Prénom">
+            <cellValueFactory><PropertyValueFactory property="prenom" /></cellValueFactory>
+         </TableColumn>
+         <TableColumn maxWidth="120.0" minWidth="120.0" prefWidth="120.0" text="Moyenne">
+            <cellValueFactory><PropertyValueFactory property="moyenne" /></cellValueFactory>
+         </TableColumn>
+        </columns>
+      </TableView>
+      <HBox alignment="BASELINE_LEFT" prefHeight="70.0" prefWidth="473.0" spacing="9.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <children>
+            <TextField fx:id="NumDA" alignment="BASELINE_LEFT" prefHeight="30.0" prefWidth="85.0" promptText="NumDA">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets top="8.0" />
+               </padding>
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="Nom" prefHeight="31.0" prefWidth="80.0" promptText="Nom">
+               <padding>
+                  <Insets left="5.0" top="8.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="3.0" />
+               </HBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="Prenom" prefHeight="30.0" prefWidth="80.0" promptText="Prenom">
+               <padding>
+                  <Insets top="8.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="8.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="Moyenne" prefHeight="30.0" prefWidth="80.0" promptText="Moyenne">
+               <padding>
+                  <Insets top="8.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="7.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#ajouterEtudiant" text="Ajouter">
+               <HBox.margin>
+                  <Insets left="7.0" top="8.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets top="6.0" />
+         </padding>
+      </HBox>
+   </children>
+</GridPane>
